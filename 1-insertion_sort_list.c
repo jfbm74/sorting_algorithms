@@ -36,8 +36,7 @@ void insertion_sort_list(listint_t **list)
 				else
 				{
 					(head->prev)->next = pivot;
-					(pivot->next)->prev = head;
-					head->next = pivot->next;
+					(pivot->next)->prev = head, head->next = pivot->next;
 					pivot->prev = head->prev;
 					pivot->next = head;
 					head->prev = pivot;
