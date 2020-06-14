@@ -20,20 +20,15 @@ void insertion_sort_list(listint_t **list)
 				if (head->prev == NULL)
 				{
 					(pivot->next)->prev = head;
-					head->next = pivot->next;
-					head->prev = pivot;
-					pivot->next = head;
-					pivot->prev = NULL;
-					*list = pivot;
-					pivot = head;
+					head->next = pivot->next, head->prev = pivot;
+					pivot->next = head, pivot->prev = NULL;
+					*list = pivot, pivot = head;
 				}
 				else if (pivot->next == NULL)
 				{
 					pivot->prev = head->prev;
-					pivot->next =  head;
-					head->next = NULL;
-					head->prev = pivot;
-					(pivot->prev)->next = pivot;
+					pivot->next =  head, head->next = NULL;
+					head->prev = pivot, (pivot->prev)->next = pivot;
 					head = head->prev->prev;
 				}
 				else
