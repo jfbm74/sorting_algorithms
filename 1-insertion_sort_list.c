@@ -9,6 +9,8 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *head, *pivot;
 
+	if (list == NULL || *list == NULL)
+		return;
 	head = pivot = *list;
 	while (pivot->next != NULL)
 	{
