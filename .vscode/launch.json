@@ -8,7 +8,7 @@ a{
 			"name": "(gdb) Launch",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "/home/juanfe/projects/sorting_algorithms/insertion",
+			"program": "/home/juanfe/projects/sorting_algorithms/quick",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
